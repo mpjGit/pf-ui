@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <div id="app">{{msg}}</div>
-    <my-button></my-button>
+    <my-button>TEST</my-button>
   </div>
 </template>
 
