@@ -3,9 +3,13 @@
     <div class="btn-content">
       <my-button class="btn">TEST</my-button>
       <my-button v-for="t in types" class="btn" :type="t" :key="t">TEST</my-button>
-      <div id="plain">
+      <div class="plain">
         <my-button class="btn" plain>TEST</my-button>
         <my-button v-for="t in types" class="btn" :type="t" :key="t+1" plain>TEST</my-button>
+      </div>
+      <div class="plain">
+        <my-button class="btn" plain>TEST</my-button>
+        <my-button v-for="t in types" class="btn" :type="t" :key="t+1" round>TEST</my-button>
       </div>
     </div>
   </div>
@@ -28,7 +32,7 @@ export default {
     margin-left: 10px;
   }
 }
-#plain {
+.plain {
   margin-top: 20px;
 }
 </style>

@@ -1,5 +1,11 @@
 <template>
-  <button class="my-button" :class="[type ? `my-button--${type}` : '', {'is-plain': plain}]">
+  <button
+    class="my-button"
+    :class="[type ? `my-button--${type}` : '', {
+    'is-plain': plain,
+    'is-round': round,
+    }]"
+  >
     <span>
       <slot></slot>
     </span>
@@ -15,6 +21,10 @@ export default {
       default: ""
     },
     plain: {
+      type: Boolean,
+      default: false
+    },
+    round: {
       type: Boolean,
       default: false
     }
