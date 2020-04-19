@@ -4,6 +4,7 @@
     :class="[type ? `my-button--${type}` : '', {
     'is-plain': plain,
     'is-round': round,
+    'is-circle': circle,
     }]"
   >
     <span>
@@ -25,6 +26,10 @@ export default {
       default: false
     },
     round: {
+      type: Boolean,
+      default: false
+    },
+    circle: {
       type: Boolean,
       default: false
     }
