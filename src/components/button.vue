@@ -6,6 +6,7 @@
     'is-round': round,
     'is-circle': circle,
     }]"
+    @click="$emit('myClick', data_1, data_2)"
   >
     <span>
       <slot></slot>
@@ -15,6 +16,12 @@
 <script>
 export default {
   name: "MyButton",
+  data() {
+    return {
+      data_1: '1',
+      data_2: '2'
+    }
+  },
   props: {
     type: {
       // 数据类型：字符串
@@ -32,6 +39,11 @@ export default {
     circle: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$emit('click', this.dd);
     }
   }
 };

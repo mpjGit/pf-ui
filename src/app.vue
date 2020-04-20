@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <div class="btn-content">
-      <my-button class="btn">TEST</my-button>
+      <my-button class="btn" @myClick="btnClick">TEST</my-button>
       <my-button v-for="t in types" class="btn" :type="t" :key="t">TEST</my-button>
       <div class="plain">
         <my-button class="btn" plain>TEST</my-button>
@@ -27,6 +27,11 @@ export default {
       msg: "Hello Vue",
       types: ["primary", "success", "info", "warning", "danger"]
     };
+  },
+  methods: {
+    btnClick(args_1, args_2) {
+      console.log(args_1, args_2);
+    }
   }
 };
 </script>
