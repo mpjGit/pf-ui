@@ -6,7 +6,7 @@
     'is-round': round,
     'is-circle': circle,
     }]"
-    @click="$emit('myClick', data_1, data_2)"
+    @click="$emit('click', $event)"
   >
     <span>
       <slot></slot>
@@ -18,9 +18,9 @@ export default {
   name: "MyButton",
   data() {
     return {
-      data_1: '1',
-      data_2: '2'
-    }
+      data_1: "1",
+      data_2: "2"
+    };
   },
   props: {
     type: {
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     handleClick() {
-      this.$emit('click', this.dd);
+      this.$emit("click", this.dd);
     }
   }
 };
