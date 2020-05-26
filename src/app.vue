@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <div class="btn-content">
-      <my-button class="btn" @click="btnClick">TEST</my-button>
+      <my-button class="btn" @click="btnClick" disabled>TEST</my-button>
     </div>
   </div>
 </template>

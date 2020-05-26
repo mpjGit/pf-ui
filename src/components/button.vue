@@ -7,6 +7,7 @@
     'is-circle': circle,
     }]"
     @click="$emit('click', $event)"
+    :disabled="disabled"
   >
     <span>
       <slot></slot>
@@ -39,12 +40,19 @@ export default {
     circle: {
       type: Boolean,
       default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
     handleClick() {
       this.$emit("click", this.dd);
     }
+  },
+  created() {
+    console.log(this.disabled);
   }
 };
 </script>
