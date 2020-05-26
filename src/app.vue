@@ -1,7 +1,12 @@
 <template>
   <div id="root">
     <div class="btn-content">
-      <my-button class="btn" @click="btnClick" disabled>TEST</my-button>
+      <!-- <my-button class="btn" @click="btnClick" disabled>TEST</my-button> -->
+      <my-dialog>
+        <template v-slot:title>
+          <h3>提示</h3>
+        </template>
+      </my-dialog>
     </div>
   </div>
 </template>
