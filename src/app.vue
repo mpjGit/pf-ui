@@ -5,11 +5,13 @@
         <div v-show="visible">动画效果</div>
       </transition>
       <button @click="toggleVisible">Toggle</button>
+      <Pf-Input placeholder="请输入" type="password" disabled></Pf-Input>
     </div>
   </div>
 </template>
 
 <script>
+import PfInput from "./components/input.vue";
 export default {
   name: "app",
   data() {
@@ -26,6 +28,9 @@ export default {
     toggleVisible() {
       this.visible = !this.visible;
     }
+  },
+  components: {
+    PfInput
   }
 };
 </script>
