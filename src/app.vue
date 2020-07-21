@@ -5,7 +5,8 @@
         <div v-show="visible">动画效果</div>
       </transition>
       <button @click="toggleVisible">Toggle</button>
-      <Pf-Input placeholder="请输入" type="password" disabled></Pf-Input>
+      <Pf-Input placeholder="请输入" type="password" v-model="username"></Pf-Input>
+      <div>{{ username }}</div>
     </div>
   </div>
 </template>
@@ -18,7 +19,8 @@ export default {
     return {
       msg: "Hello Vue",
       types: ["primary", "success", "info", "warning", "danger"],
-      visible: true
+      visible: true,
+      username: ""
     };
   },
   methods: {

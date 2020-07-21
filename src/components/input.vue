@@ -1,6 +1,12 @@
 <template>
   <div>
-    <input :type="type" :placeholder="placeholder" :disabled="disabled" />
+    <input
+      :type="type"
+      :placeholder="placeholder"
+      :disabled="disabled"
+      :value="value"
+      @input="handleInput"
+    />
   </div>
 </template>
 
@@ -19,6 +25,15 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    value: {
+      type: String,
+      default: ""
+    }
+  },
+  methods: {
+    handleInput(evt) {
+      this.$emit("input", evt.target.value);
     }
   }
 };
