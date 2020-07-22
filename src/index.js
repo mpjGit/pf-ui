@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./app.vue";
 import MyButton from "./components/button.vue";
 import MyDialog from "./components/dialog.vue";
+import "./assets/font/iconfont.css";
 
 // 全局组测组件
 Vue.component(MyButton.name, MyButton);

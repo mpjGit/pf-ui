@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import "./assets/font/iconfont.css";
 import PfInput from "./components/input.vue";
 export default {
   name: "app",

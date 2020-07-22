@@ -7,10 +7,12 @@
       :value="value"
       @input="handleInput"
     />
+    <span class="iconfont icon-delete"></span>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "PFinput",
   props: {

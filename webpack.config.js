@@ -44,11 +44,16 @@ module.exports = {
         use: ["style-loader", "css-loader", "less-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.css$/,
+        use: ["css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|eot|ttf)(\?.*)?$/,
         use: {
           loader: "url-loader",
           options: {
             limit: 10000,
+            name: 'font/[name].[md5:hash:hex:7].[ext]'
           },
         },
       },
